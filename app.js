@@ -27,9 +27,8 @@ app.post('/payments/initiate', ((req, res) => {
         purpose: "credit top up",
         service_name: "arkesel",
         currency: "GHS",
-        callback_url: "https://eacc-154-160-14-146.ngrok.io/payments/arkesel/callback"
     };
-    const apiKey = 'OlJDRVZSQTRwOGJUZDVLb1E=';
+    const apiKey = 'XXXXXXXXXXXXXXXXXXXX=';
     const url = 'https://payment.arkesel.com/api/v1/payment/charge/initiate';
 
     axios({
@@ -65,8 +64,8 @@ app.get('/payments/arkesel/callback', ((req, res) => {
 
 // Verify payment
 app.get('/payments/verify', ((req, res) => {
-    const apiKey = 'OlJDRVZSQTRwOGJUZDVLb1E=';
-    const transRef = 'T6273e8cac8175';
+    const apiKey = 'XXXXXXXXXXXXXXXXXXXXXXX=';
+    const transRef = 'T634E3e8cac8175';
     const url = `https://payment.arkesel.com/api/v1/verify/transaction/${transRef}`;
 
     axios({
